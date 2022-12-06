@@ -1,0 +1,11 @@
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\bin\Debug\InterfazSerialV2.exe.config
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\bin\Debug\InterfazSerialV2.exe
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\bin\Debug\InterfazSerialV2.pdb
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\obj\Debug\InterfazSerialV2.csproj.AssemblyReference.cache
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\obj\Debug\InterfazSerialV2.csproj.SuggestedBindingRedirects.cache
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\obj\Debug\InterfazSerialV2.Properties.Resources.resources
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\obj\Debug\InterfazSerialV2.csproj.GenerateResource.cache
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\obj\Debug\InterfazSerialV2.csproj.CoreCompileInputs.cache
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\obj\Debug\InterfazSerialV2.exe
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\obj\Debug\InterfazSerialV2.pdb
+F:\Users\Jared\Documents\programacion\VisualStudioAplicaciones\interfazSerial\InterfazSerialV2\obj\Debug\InterfazSerialV2.ventana.resources
