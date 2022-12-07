@@ -42,18 +42,15 @@ namespace InterfazSerialV2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //añadir imagen
+            TermoImage.Image = Image.FromFile("F:\\Users\\Jared\\Documents\\programacion\\VisualStudioAplicaciones\\interfazSerial\\InterfazSerialV2\\iconos\\Medicina-432.gif");
+            TermoImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            TermoImage.Visible= false;
             //NOTA: intentar agregar esto en una funcion para no repetir
             //NOTA: usar el valor booleano como variable de la funcion para optimizar code:1
             //hace invisible al inicio
-            EncenderSist.Visible = false;
             ModoManual.Visible = false;
-            relevadorOn.Visible = false;
-            relevadorOff.Visible = false;
-            BuzzerOn.Visible = false;
-            BuzzerOff.Visible = false;
-            LEDOn.Visible = false;
-            LEDOff.Visible = false;
+            panelBotones.Visible = false;
 
             ModoAuto.Visible = false;
             IniciarCalent.Visible = false;
@@ -61,12 +58,7 @@ namespace InterfazSerialV2
 
             //deshabilita los botones
             ModoManual.Enabled= false;
-            relevadorOn.Enabled = false;
-            relevadorOff.Enabled = false;
-            BuzzerOn.Enabled = false;
-            BuzzerOff.Enabled = false;
-            LEDOn.Enabled = false;
-            LEDOff.Enabled = false;
+            panelBotones.Enabled= false;
 
             ModoAuto.Enabled = false;
             IniciarCalent.Enabled = false;
@@ -82,34 +74,35 @@ namespace InterfazSerialV2
 
         private void ModoAuto_Click(object sender, EventArgs e)
         {
+            PuertoSerie.WriteLine("*");
             //deshabilita el modo manual
-            relevadorOn.Enabled = false;
-            relevadorOff.Enabled = false;
-            BuzzerOn.Enabled = false;
-            BuzzerOff.Enabled = false;
-            LEDOn.Enabled = false;  
-            LEDOff.Enabled = false;
-
+            panelBotones.Enabled = false;
             //habilita botones modo auto
             IniciarCalent.Enabled = true;
             ProgramarTemp.Enabled = true;
+            PuertoSerie.WriteLine("*");
+            PuertoSerie.WriteLine("B");
 
+            //asigna colores botones en rojo
+            button3.BackColor = Color.OrangeRed;
+            button2.BackColor = Color.OrangeRed;
+            button1.BackColor = Color.OrangeRed;
+
+            TermoImage.Visible = false;
         }
 
         private void ModoManual_Click(object sender, EventArgs e)
         {
+            PuertoSerie.WriteLine("C");
+            TermoImage.Visible = false;
             //habilita botones modo manual
             MessageBox.Show("mantega vigilado el equipo mientras esta habilitado este modo");
-            relevadorOn.Enabled = true;
-            relevadorOff.Enabled = true;
-            BuzzerOn.Enabled = true;
-            BuzzerOff.Enabled = true;
-            LEDOn.Enabled = true;
-            LEDOff.Enabled = true;
+            panelBotones.Enabled = true;
 
             //deshabilita botones modo auto
             IniciarCalent.Enabled = false;
             ProgramarTemp.Enabled = false;
+            PuertoSerie.WriteLine("C");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -137,16 +130,14 @@ namespace InterfazSerialV2
                         //coencta el puerto serie
                         PuertoSerie.Open();
                         BtnConectar.Text = "desconectar";
+                        BtnConectar.BackColor= Color.Firebrick;
+                        BtnConectar.ForeColor = Color.White;
+                        
 
                         //habilitar botones code:1
                         //EncenderSist.Visible = true;
                         ModoManual.Visible = true;
-                        relevadorOn.Visible = true;
-                        relevadorOff.Visible = true;
-                        BuzzerOn.Visible = true;
-                        BuzzerOff.Visible = true;
-                        LEDOn.Visible = true;
-                        LEDOff.Visible = true;
+                        panelBotones.Visible = true;
 
                         ModoAuto.Visible = true;
                         IniciarCalent.Visible = true;
@@ -172,16 +163,13 @@ namespace InterfazSerialV2
                     //desconecta el puerto serie
                     PuertoSerie.Close();
                     BtnConectar.Text = "conectar";
+                    //cambio color boton
+                    BtnConectar.BackColor = Color.LimeGreen;
+                    BtnConectar.ForeColor = Color.Black;
                     //deshabilitar botones code:1
                     //hace invisible al inicio
-                    EncenderSist.Visible = false;
                     ModoManual.Visible = false;
-                    relevadorOn.Visible = false;
-                    relevadorOff.Visible = false;
-                    BuzzerOn.Visible = false;
-                    BuzzerOff.Visible = false;
-                    LEDOn.Visible = false;
-                    LEDOff.Visible = false;
+                    panelBotones.Visible= false;
 
                     ModoAuto.Visible = false;
                     IniciarCalent.Visible = false;
@@ -189,17 +177,13 @@ namespace InterfazSerialV2
 
                     //deshabilita los botones
                     ModoManual.Enabled = false;
-                    relevadorOn.Enabled = false;
-                    relevadorOff.Enabled = false;
-                    BuzzerOn.Enabled = false;
-                    BuzzerOff.Enabled = false;
-                    LEDOn.Enabled = false;
-                    LEDOff.Enabled = false;
+                    panelBotones.Enabled= false;
 
                     ModoAuto.Enabled = false;
                     IniciarCalent.Enabled = false;
                     ProgramarTemp.Enabled = false;
                     //fin de la deshabilitacion
+                    TermoImage.Visible = false;
 
                     //code:2
                     BtnPuertos.Visible = true;
@@ -251,6 +235,8 @@ namespace InterfazSerialV2
         private void IniciarCalent_Click(object sender, EventArgs e)
         {
             PuertoSerie.WriteLine("A");
+            TermoImage.Visible = true;
+            PuertoSerie.WriteLine("A");
         }
 
         private void DatosRecibidos_TextChanged(object sender, EventArgs e)
@@ -260,6 +246,8 @@ namespace InterfazSerialV2
 
         private void ProgramarTemp_Click(object sender, EventArgs e)
         {
+            PuertoSerie.WriteLine("B");
+            TermoImage.Visible = false;
             PuertoSerie.WriteLine("B");
         }
 
@@ -274,6 +262,102 @@ namespace InterfazSerialV2
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            //PuertoSerie.WriteLine("F");
+        }
+
+        private void radioBtnRele_CheckedChanged(object sender, EventArgs e)
+        {
+            //PuertoSerie.WriteLine("D");
+        }
+
+        private void radioBtnLED_CheckedChanged(object sender, EventArgs e)
+        {
+            //PuertoSerie.WriteLine("E");
+        }
+
+        private void radioBtnRele_Click(object sender, EventArgs e)
+        {
+            PuertoSerie.WriteLine("D");
+        }
+
+        private void radioBtnLED_Click(object sender, EventArgs e)
+        {
+            PuertoSerie.WriteLine("E");
+        }
+
+        private void radioBtnBuzzer_Click(object sender, EventArgs e)
+        {
+            PuertoSerie.WriteLine("F");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PuertoSerie.WriteLine("D");
+            if (button1.BackColor == Color.OrangeRed)
+            {
+                button1.BackColor = Color.LimeGreen;
+            }
+            else
+            {
+                button1.BackColor = Color.OrangeRed;
+            }
+            
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PuertoSerie.WriteLine("E");
+            if (button2.BackColor == Color.OrangeRed)
+            {
+                button2.BackColor = Color.LimeGreen;
+            }
+            else
+            {
+                button2.BackColor = Color.OrangeRed;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PuertoSerie.WriteLine("F");
+            if (button3.BackColor == Color.OrangeRed)
+            {
+                button3.BackColor = Color.LimeGreen;
+            }
+            else
+            {
+                button3.BackColor = Color.OrangeRed;
+            }
+        }
+
+        private void TermoImage_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

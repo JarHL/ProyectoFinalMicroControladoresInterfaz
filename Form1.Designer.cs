@@ -34,14 +34,7 @@
             this.ModoAuto = new System.Windows.Forms.Button();
             this.IniciarCalent = new System.Windows.Forms.Button();
             this.ProgramarTemp = new System.Windows.Forms.Button();
-            this.EncenderSist = new System.Windows.Forms.Button();
             this.ModoManual = new System.Windows.Forms.Button();
-            this.relevadorOn = new System.Windows.Forms.Button();
-            this.BuzzerOn = new System.Windows.Forms.Button();
-            this.LEDOn = new System.Windows.Forms.Button();
-            this.relevadorOff = new System.Windows.Forms.Button();
-            this.BuzzerOff = new System.Windows.Forms.Button();
-            this.LEDOff = new System.Windows.Forms.Button();
             this.mssgManual = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.PuertoSerie = new System.IO.Ports.SerialPort(this.components);
@@ -49,12 +42,26 @@
             this.ListaPuertos = new System.Windows.Forms.ComboBox();
             this.BtnConectar = new System.Windows.Forms.Button();
             this.LabelInstruccion = new System.Windows.Forms.Label();
+            this.panelBotones = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PanelAuto = new System.Windows.Forms.Panel();
+            this.panelManual = new System.Windows.Forms.Panel();
+            this.TermoImage = new System.Windows.Forms.PictureBox();
+            this.panelBotones.SuspendLayout();
+            this.PanelAuto.SuspendLayout();
+            this.panelManual.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TermoImage)).BeginInit();
             this.SuspendLayout();
             // 
             // DatosRecibidos
             // 
             this.DatosRecibidos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DatosRecibidos.Location = new System.Drawing.Point(24, 41);
+            this.DatosRecibidos.Location = new System.Drawing.Point(44, 31);
             this.DatosRecibidos.Name = "DatosRecibidos";
             this.DatosRecibidos.ReadOnly = true;
             this.DatosRecibidos.Size = new System.Drawing.Size(709, 20);
@@ -65,106 +72,54 @@
             // 
             // ModoAuto
             // 
-            this.ModoAuto.Location = new System.Drawing.Point(85, 102);
+            this.ModoAuto.AutoSize = true;
+            this.ModoAuto.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ModoAuto.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModoAuto.ForeColor = System.Drawing.Color.White;
+            this.ModoAuto.Location = new System.Drawing.Point(46, 15);
             this.ModoAuto.Name = "ModoAuto";
-            this.ModoAuto.Size = new System.Drawing.Size(88, 23);
+            this.ModoAuto.Size = new System.Drawing.Size(123, 35);
             this.ModoAuto.TabIndex = 1;
             this.ModoAuto.Text = "Modo Auto";
-            this.ModoAuto.UseVisualStyleBackColor = true;
+            this.ModoAuto.UseVisualStyleBackColor = false;
             this.ModoAuto.Click += new System.EventHandler(this.ModoAuto_Click);
             // 
             // IniciarCalent
             // 
-            this.IniciarCalent.Location = new System.Drawing.Point(143, 154);
+            this.IniciarCalent.BackColor = System.Drawing.Color.LimeGreen;
+            this.IniciarCalent.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IniciarCalent.Location = new System.Drawing.Point(133, 76);
             this.IniciarCalent.Name = "IniciarCalent";
-            this.IniciarCalent.Size = new System.Drawing.Size(75, 23);
+            this.IniciarCalent.Size = new System.Drawing.Size(95, 33);
             this.IniciarCalent.TabIndex = 2;
             this.IniciarCalent.Text = "iniciar";
-            this.IniciarCalent.UseVisualStyleBackColor = true;
+            this.IniciarCalent.UseVisualStyleBackColor = false;
             this.IniciarCalent.Click += new System.EventHandler(this.IniciarCalent_Click);
             // 
             // ProgramarTemp
             // 
-            this.ProgramarTemp.Location = new System.Drawing.Point(24, 154);
+            this.ProgramarTemp.BackColor = System.Drawing.Color.Tomato;
+            this.ProgramarTemp.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramarTemp.Location = new System.Drawing.Point(0, 76);
             this.ProgramarTemp.Name = "ProgramarTemp";
-            this.ProgramarTemp.Size = new System.Drawing.Size(75, 23);
+            this.ProgramarTemp.Size = new System.Drawing.Size(95, 33);
             this.ProgramarTemp.TabIndex = 3;
-            this.ProgramarTemp.Text = "programar t°";
-            this.ProgramarTemp.UseVisualStyleBackColor = true;
+            this.ProgramarTemp.Text = "ajustar C°";
+            this.ProgramarTemp.UseVisualStyleBackColor = false;
             this.ProgramarTemp.Click += new System.EventHandler(this.ProgramarTemp_Click);
-            // 
-            // EncenderSist
-            // 
-            this.EncenderSist.Location = new System.Drawing.Point(328, 79);
-            this.EncenderSist.Name = "EncenderSist";
-            this.EncenderSist.Size = new System.Drawing.Size(89, 23);
-            this.EncenderSist.TabIndex = 4;
-            this.EncenderSist.Text = "encender";
-            this.EncenderSist.UseVisualStyleBackColor = true;
             // 
             // ModoManual
             // 
-            this.ModoManual.Location = new System.Drawing.Point(587, 102);
+            this.ModoManual.BackColor = System.Drawing.Color.Firebrick;
+            this.ModoManual.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModoManual.ForeColor = System.Drawing.Color.White;
+            this.ModoManual.Location = new System.Drawing.Point(53, 15);
             this.ModoManual.Name = "ModoManual";
-            this.ModoManual.Size = new System.Drawing.Size(88, 23);
+            this.ModoManual.Size = new System.Drawing.Size(123, 35);
             this.ModoManual.TabIndex = 5;
             this.ModoManual.Text = "Modo manual";
-            this.ModoManual.UseVisualStyleBackColor = true;
+            this.ModoManual.UseVisualStyleBackColor = false;
             this.ModoManual.Click += new System.EventHandler(this.ModoManual_Click);
-            // 
-            // relevadorOn
-            // 
-            this.relevadorOn.Location = new System.Drawing.Point(515, 154);
-            this.relevadorOn.Name = "relevadorOn";
-            this.relevadorOn.Size = new System.Drawing.Size(75, 23);
-            this.relevadorOn.TabIndex = 6;
-            this.relevadorOn.Text = "relevador";
-            this.relevadorOn.UseVisualStyleBackColor = true;
-            // 
-            // BuzzerOn
-            // 
-            this.BuzzerOn.Location = new System.Drawing.Point(515, 206);
-            this.BuzzerOn.Name = "BuzzerOn";
-            this.BuzzerOn.Size = new System.Drawing.Size(75, 23);
-            this.BuzzerOn.TabIndex = 7;
-            this.BuzzerOn.Text = "buzzer";
-            this.BuzzerOn.UseVisualStyleBackColor = true;
-            // 
-            // LEDOn
-            // 
-            this.LEDOn.Location = new System.Drawing.Point(515, 248);
-            this.LEDOn.Name = "LEDOn";
-            this.LEDOn.Size = new System.Drawing.Size(75, 23);
-            this.LEDOn.TabIndex = 8;
-            this.LEDOn.Text = "LED";
-            this.LEDOn.UseVisualStyleBackColor = true;
-            // 
-            // relevadorOff
-            // 
-            this.relevadorOff.Location = new System.Drawing.Point(658, 154);
-            this.relevadorOff.Name = "relevadorOff";
-            this.relevadorOff.Size = new System.Drawing.Size(75, 23);
-            this.relevadorOff.TabIndex = 9;
-            this.relevadorOff.Text = "Apagar";
-            this.relevadorOff.UseVisualStyleBackColor = true;
-            // 
-            // BuzzerOff
-            // 
-            this.BuzzerOff.Location = new System.Drawing.Point(658, 206);
-            this.BuzzerOff.Name = "BuzzerOff";
-            this.BuzzerOff.Size = new System.Drawing.Size(75, 23);
-            this.BuzzerOff.TabIndex = 10;
-            this.BuzzerOff.Text = "Apagar";
-            this.BuzzerOff.UseVisualStyleBackColor = true;
-            // 
-            // LEDOff
-            // 
-            this.LEDOff.Location = new System.Drawing.Point(658, 248);
-            this.LEDOff.Name = "LEDOff";
-            this.LEDOff.Size = new System.Drawing.Size(75, 23);
-            this.LEDOff.TabIndex = 11;
-            this.LEDOff.Text = "Apagar";
-            this.LEDOff.UseVisualStyleBackColor = true;
             // 
             // mssgManual
             // 
@@ -187,69 +142,182 @@
             // 
             // BtnPuertos
             // 
-            this.BtnPuertos.Location = new System.Drawing.Point(328, 154);
+            this.BtnPuertos.BackColor = System.Drawing.Color.LimeGreen;
+            this.BtnPuertos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPuertos.Location = new System.Drawing.Point(331, 153);
             this.BtnPuertos.Name = "BtnPuertos";
-            this.BtnPuertos.Size = new System.Drawing.Size(89, 23);
+            this.BtnPuertos.Size = new System.Drawing.Size(127, 34);
             this.BtnPuertos.TabIndex = 13;
             this.BtnPuertos.Text = "Buscar Puertos";
-            this.BtnPuertos.UseVisualStyleBackColor = true;
+            this.BtnPuertos.UseVisualStyleBackColor = false;
             this.BtnPuertos.Click += new System.EventHandler(this.Puertos_Click);
             // 
             // ListaPuertos
             // 
             this.ListaPuertos.FormattingEnabled = true;
-            this.ListaPuertos.Location = new System.Drawing.Point(307, 206);
+            this.ListaPuertos.Location = new System.Drawing.Point(331, 203);
             this.ListaPuertos.Name = "ListaPuertos";
             this.ListaPuertos.Size = new System.Drawing.Size(121, 21);
             this.ListaPuertos.TabIndex = 14;
             // 
             // BtnConectar
             // 
-            this.BtnConectar.Location = new System.Drawing.Point(328, 280);
+            this.BtnConectar.BackColor = System.Drawing.Color.LimeGreen;
+            this.BtnConectar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConectar.ForeColor = System.Drawing.Color.Black;
+            this.BtnConectar.Location = new System.Drawing.Point(331, 286);
             this.BtnConectar.Name = "BtnConectar";
-            this.BtnConectar.Size = new System.Drawing.Size(89, 23);
+            this.BtnConectar.Size = new System.Drawing.Size(134, 49);
             this.BtnConectar.TabIndex = 15;
             this.BtnConectar.Text = "conectar";
-            this.BtnConectar.UseVisualStyleBackColor = true;
+            this.BtnConectar.UseVisualStyleBackColor = false;
             this.BtnConectar.Click += new System.EventHandler(this.conectar_Click);
             // 
             // LabelInstruccion
             // 
             this.LabelInstruccion.AutoSize = true;
             this.LabelInstruccion.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelInstruccion.Location = new System.Drawing.Point(231, 120);
+            this.LabelInstruccion.Location = new System.Drawing.Point(255, 117);
             this.LabelInstruccion.Name = "LabelInstruccion";
             this.LabelInstruccion.Size = new System.Drawing.Size(281, 22);
             this.LabelInstruccion.TabIndex = 16;
             this.LabelInstruccion.Text = "Elija el puerto al cual conectarse";
             this.LabelInstruccion.Click += new System.EventHandler(this.label2_Click);
             // 
+            // panelBotones
+            // 
+            this.panelBotones.Controls.Add(this.button3);
+            this.panelBotones.Controls.Add(this.button2);
+            this.panelBotones.Controls.Add(this.button1);
+            this.panelBotones.Controls.Add(this.label4);
+            this.panelBotones.Controls.Add(this.label3);
+            this.panelBotones.Controls.Add(this.label2);
+            this.panelBotones.Location = new System.Drawing.Point(3, 88);
+            this.panelBotones.Name = "panelBotones";
+            this.panelBotones.Size = new System.Drawing.Size(200, 149);
+            this.panelBotones.TabIndex = 20;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.OrangeRed;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(3, 96);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(42, 39);
+            this.button3.TabIndex = 25;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.OrangeRed;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(3, 51);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(42, 39);
+            this.button2.TabIndex = 24;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.OrangeRed;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(3, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 39);
+            this.button1.TabIndex = 23;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(45, 102);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Buzzer";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(51, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 16);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "LED";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(47, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 16);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "relevador";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // PanelAuto
+            // 
+            this.PanelAuto.BackColor = System.Drawing.Color.PowderBlue;
+            this.PanelAuto.Controls.Add(this.ProgramarTemp);
+            this.PanelAuto.Controls.Add(this.IniciarCalent);
+            this.PanelAuto.Controls.Add(this.ModoAuto);
+            this.PanelAuto.Location = new System.Drawing.Point(36, 78);
+            this.PanelAuto.Name = "PanelAuto";
+            this.PanelAuto.Size = new System.Drawing.Size(231, 237);
+            this.PanelAuto.TabIndex = 21;
+            // 
+            // panelManual
+            // 
+            this.panelManual.BackColor = System.Drawing.Color.PowderBlue;
+            this.panelManual.Controls.Add(this.panelBotones);
+            this.panelManual.Controls.Add(this.ModoManual);
+            this.panelManual.Location = new System.Drawing.Point(534, 78);
+            this.panelManual.Name = "panelManual";
+            this.panelManual.Size = new System.Drawing.Size(223, 237);
+            this.panelManual.TabIndex = 22;
+            // 
+            // TermoImage
+            // 
+            this.TermoImage.Location = new System.Drawing.Point(331, 114);
+            this.TermoImage.Name = "TermoImage";
+            this.TermoImage.Size = new System.Drawing.Size(148, 166);
+            this.TermoImage.TabIndex = 23;
+            this.TermoImage.TabStop = false;
+            this.TermoImage.Click += new System.EventHandler(this.TermoImage_Click);
+            // 
             // ventana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TermoImage);
+            this.Controls.Add(this.panelManual);
             this.Controls.Add(this.LabelInstruccion);
             this.Controls.Add(this.BtnConectar);
             this.Controls.Add(this.ListaPuertos);
             this.Controls.Add(this.BtnPuertos);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.LEDOff);
-            this.Controls.Add(this.BuzzerOff);
-            this.Controls.Add(this.relevadorOff);
-            this.Controls.Add(this.LEDOn);
-            this.Controls.Add(this.BuzzerOn);
-            this.Controls.Add(this.relevadorOn);
-            this.Controls.Add(this.ModoManual);
-            this.Controls.Add(this.EncenderSist);
-            this.Controls.Add(this.ProgramarTemp);
-            this.Controls.Add(this.IniciarCalent);
-            this.Controls.Add(this.ModoAuto);
             this.Controls.Add(this.DatosRecibidos);
+            this.Controls.Add(this.PanelAuto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ventana";
             this.Text = "control calentador";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panelBotones.ResumeLayout(false);
+            this.panelBotones.PerformLayout();
+            this.PanelAuto.ResumeLayout(false);
+            this.PanelAuto.PerformLayout();
+            this.panelManual.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TermoImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,14 +329,7 @@
         private System.Windows.Forms.Button ModoAuto;
         private System.Windows.Forms.Button IniciarCalent;
         private System.Windows.Forms.Button ProgramarTemp;
-        private System.Windows.Forms.Button EncenderSist;
         private System.Windows.Forms.Button ModoManual;
-        private System.Windows.Forms.Button relevadorOn;
-        private System.Windows.Forms.Button BuzzerOn;
-        private System.Windows.Forms.Button LEDOn;
-        private System.Windows.Forms.Button relevadorOff;
-        private System.Windows.Forms.Button BuzzerOff;
-        private System.Windows.Forms.Button LEDOff;
         private System.Windows.Forms.ToolTip mssgManual;
         private System.Windows.Forms.Label label1;
         private System.IO.Ports.SerialPort PuertoSerie;
@@ -276,6 +337,16 @@
         private System.Windows.Forms.ComboBox ListaPuertos;
         private System.Windows.Forms.Button BtnConectar;
         private System.Windows.Forms.Label LabelInstruccion;
+        private System.Windows.Forms.Panel panelBotones;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel PanelAuto;
+        private System.Windows.Forms.Panel panelManual;
+        private System.Windows.Forms.PictureBox TermoImage;
     }
 }
 
